@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="myscript.js"></script>
+</head>
+<body>
+    <!-- http://127.0.0.1:5500/index.html?firstName=Geo&lastName=Paspa&email=paspa@paspa -->
+   <form action="" method="GET" >
+     <label for="firstName">First Name: </label> 
+     <input type="text" id="Firstname"><br />
+     <label for="firstName">Last Name: </label> 
+     <input type="text" id="Lastname"><br />
+     <label for="email" type="email">Email: </label> 
+     <input type="text" id="Email"><br />
+     <input type="submit" value="Submit" onclick="myClick()">
+    
+   </form>
+   <script>
+       b = 40;
+       function myClick() {
+        //    alert(document.getElementById("firstName").value);
+            b = 999;
+           firstName = document.getElementById("Firstname").value;
+           document.cookie = "Firstname=" + firstName;
+           // Store
+           localStorage.setItem("Firstname", firstName);
+
+
+        //    alert(firstName);
+           lastName = document.getElementById("Lastname").value;
+           email = document.getElementById("Email").value;
+       }
+   </script>
+</body>
+</html>
